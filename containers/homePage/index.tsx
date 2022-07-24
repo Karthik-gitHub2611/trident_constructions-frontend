@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./styles.module.scss"
 
 type Tprops = {
 
@@ -6,7 +7,7 @@ type Tprops = {
 
 const HomePage: React.FC<Tprops> = () => {
     return (
-        <div>
+        <div className={styles.homePage}>
             Welcome to Trident Constructions
         </div>
     )

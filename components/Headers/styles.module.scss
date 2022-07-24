@@ -4,6 +4,74 @@
     left: 0;
     width: 100%;
     text-align: center;
-    background-color: #ff8a00;
     color: white;
+
+    .band {
+        background-color: #ff8a00;
+        height: auto;
+        display: grid;
+        grid-template-columns: 33.33% 33.33% 33.33%;
+
+        .mobileNo,
+        .email {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            p {
+                padding-left: 10px;
+                color: #000;
+            }
+        }
+
+        .socialMedia {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 10px;
+        }
+    }
+
+    .headerMenus {
+        display: grid;
+        padding-top: 25px;
+        grid-template-columns: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66%;
+        color: #000;
+        font-weight: 600;
+
+        li {
+            display: table-cell;
+            position: relative;
+            padding: 15px 0;
+
+
+            a {
+                cursor: pointer;
+                text-decoration: none;
+            }
+
+            // a:after {
+            //     background: none repeat scroll 0 0 transparent;
+            //     bottom: 0;
+            //     content: "";
+            //     display: block;
+            //     height: 2px;
+            //     // left: 50%;
+            //     position: absolute;
+            //     background: rgb(230, 29, 29);
+            //     transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            //     width: 0;
+            // }
+
+            a:hover:after {
+                width: 100%;
+                left: 0;
+            }
+
+            .active {
+                text-decoration: underline !important;
+                color: #ff8a00;
+            }
+        }
+    }
 }

@@ -20,7 +20,9 @@ const Home: NextPage = () => {
         metaDescription={metaTags}
       />
       <Header />
+      <div className={styles.main}>
       <HomePage />
+      </div>
       <Footers />
     </div>
   )
