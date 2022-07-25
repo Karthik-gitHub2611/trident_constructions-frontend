@@ -4,6 +4,52 @@
         left: 0;
         width: 100%;
         text-align: center;
-        background-color: indigo;
+        background-color: #3b3a3a;
         color: white;
+
+        .footerContainer {
+            padding: 25px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .icon {
+                img{
+                    
+                }
+            }
+            .address{
+                width: 100%;
+                max-width: 200px;
+                flex-wrap: nowrap;
+                text-align: justify;
+                h2{
+                    margin-bottom: 50px;
+                }
+                p{
+                   
+                }
+            }
+            .footerMenus{
+               
+                h2{
+                    padding-bottom: 20px;
+                }       
+                a{
+                    text-align: left;
+                    padding: 10px;
+                    gap: 10px;
+                    cursor: pointer;
+                    font-family: Poppins-Light;
+                    font-size: 14px;
+                    display: flex;
+                    align-items: center;
+                }
+                a:hover{
+                    padding-left: 25px;
+                    transition: all 0.5s;
+                    color: #ff8a00;
+                }
+            }
+
+        }
     }

@@ -6,7 +6,10 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import GoogleIcon from '@mui/icons-material/Google';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import Logo from "../../assests/images/logo.png"
 import { useRouter } from 'next/router'
+import Image from "next/image";
+import { MENUS } from "../../common/constants";
 
 type Tprops = {
 
@@ -17,8 +20,7 @@ const Header: React.FC<Tprops> = () => {
 
     const router = useRouter()
     const currentUrl = router.pathname
-    
-    const headerMenus: { path: string, label: string }[] = [{ path: "/", label: "Home" }, { path: "/about_Us", label: "About Us" }, { path: "/services", label: "Services" }, { path: "/projects", label: "Projects" }, { path: "/enquires", label: "Enquiry" }, { path: "/contact_us", label: "Contact Us" }];
+
 
     return (
         <div className={styles.headers}>
@@ -39,7 +41,10 @@ const Header: React.FC<Tprops> = () => {
                 </div>
             </div>
             <div className={styles.headerMenus}>
-                {headerMenus?.map((menu,index:number) => <li key={index}><a onClick={() => router.push(`${menu.path}`)} className={menu.path === currentUrl ? styles.active : styles.inActive}>{menu.label}</a></li>)}
+                <div className={styles.logo}>
+                    <Image src={Logo} alt="" />
+                </div>
+                {MENUS?.map((menu, index: number) => <li key={index}><a onClick={() => router.push(`${menu.path}`)} className={menu.path === currentUrl ? styles.active : styles.inActive}>{menu.label}</a></li>)}
             </div>
         </div>
     )

@@ -1,0 +1,1 @@
+export const MENUS: { path: string, label: string }[] = [{ path: "/", label: "Home" }, { path: "/about_Us", label: "About Us" }, { path: "/services", label: "Services" }, { path: "/projects", label: "Projects" }, { path: "/enquires", label: "Enquiry" }, { path: "/contact_us", label: "Contact Us" }];
